@@ -1,7 +1,9 @@
 #include "msquic.h"
 #include "utils.h"
+#include "client.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h>
 
 #ifndef UNREFERENCED_PARAMETER
 #define UNREFERENCED_PARAMETER(P) (void)(P)
@@ -80,9 +82,6 @@ void PrintUsage()
         "  quicsample.exe -server -cert_file:<...> -key_file:<...> [-password:<...>]\n"
         );
 }
-
-
-
 
 
 //

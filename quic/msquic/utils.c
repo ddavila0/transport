@@ -1,7 +1,6 @@
-#include"utils.h"
 #include"msquic.h"
+#include"utils.h"
 
- 
 //
 // Helper functions to look up a command line arguments.
 //
@@ -23,12 +22,7 @@ GetFlag(
 }
 
 
-_Ret_maybenull_ _Null_terminated_ const char*
-GetValue(
-    _In_ int argc,
-    _In_reads_(argc) _Null_terminated_ char* argv[],
-    _In_z_ const char* name
-    )
+const char* GetValue(int argc,char* argv[],const char* name)
 {
     const size_t nameLen = strlen(name);
     for (int i = 0; i < argc; i++) {
@@ -188,14 +182,3 @@ void WriteSslKeyLogFile(const char* FileName,QUIC_TLS_SECRETS* TlsSecrets)
     fflush(File);
     fclose(File);
 }
-
-void QuicAddrSetFamily(
-    _In_ QUIC_ADDR* Addr,
-    _In_ QUIC_ADDRESS_FAMILY Family
-    );
-
-void QuicAddrSetPort(
-    _Out_ QUIC_ADDR* Addr,
-    _In_ uint16_t Port
-    );
-
