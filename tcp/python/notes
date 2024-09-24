@@ -1,0 +1,3 @@
+TODO
+Client:
+- Add option to use numpy to read from memory instead of a file
